@@ -1,0 +1,534 @@
+<header id="site-header" aria-label="Top navigation">
+  <div id="nav-container">
+    <button
+      id="nav-menu-btn"
+      class="btn-square"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="nav-modal-container"
+      data-open-nav-modal
+      type="button"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="4" x2="20" y1="12" y2="12"></line>
+        <line x1="4" x2="20" y1="6" y2="6"></line>
+        <line x1="4" x2="20" y1="18" y2="18"></line>
+      </svg>
+    </button>
+
+    <a href="/" aria-label="Go to homepage" class="nav-logo-link">
+      <img id="nav-logo" src="/rizivici-logo.png" alt="Rizi Vici logo" />
+    </a>
+
+    <button
+      id="nav-contact-btn"
+      class="btn-square"
+      aria-label="Open contact form"
+      aria-expanded="false"
+      aria-controls="contact-modal-container"
+      data-open-contact-modal
+      type="button"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"></path>
+        <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"></path>
+        <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"></path>
+        <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- NAV MENU MODAL -->
+  <div id="nav-modal-container" class="modal-shell" aria-hidden="true">
+    <div id="nav-modal-backdrop" class="modal-backdrop" data-close-nav-modal></div>
+
+    <aside
+      id="nav-modal"
+      class="modal-panel modal-panel-left"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Navigation menu"
+      tabindex="-1"
+    >
+      <button id="close-nav-modal" class="modal-close" aria-label="Close navigation menu" data-close-nav-modal type="button">
+        <span aria-hidden="true">×</span>
+      </button>
+
+      <div id="nav-menu-container">
+        <a href="/" class="menu-logo" aria-label="Go to homepage" data-close-nav-modal>
+          <img src="/rizivici-logo.png" id="nav-menu-logo" alt="Rizi Vici logo" />
+        </a>
+
+        <nav id="nav-links" aria-label="Main navigation">
+          <ul role="list" class="nav-list">
+            <li class="nav-item">
+              <a href="#about-preview" class="nav-link" data-section="about-preview" data-close-nav-modal>Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="#home-work-section" class="nav-link" data-section="home-work-section" data-close-nav-modal>Work</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about-preview" class="nav-link" data-section="about-preview" data-close-nav-modal>About</a>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link nav-link-button" type="button" data-open-contact-from-menu data-close-nav-modal>
+                Contact
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- optional external link slot (kept, but valid) -->
+        <div id="nav-shop-link" class="nav-extra">
+          <a
+            href="https://github.com/k3yueen"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="nav-link nav-link-inline"
+            aria-label="Open GitHub in new tab"
+          >
+            GitHub
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M15 3h6v6"></path>
+              <path d="M10 14 21 3"></path>
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            </svg>
+          </a>
+        </div>
+
+        <div id="nav-menu-bottom" class="menu-bottom">
+          <p class="menu-bottom-title">Reach out to me here.</p>
+          <a href="mailto:rozic.antonevici@me.com" class="menu-bottom-body">
+            rozic.antonevici@me.com
+          </a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- CONTACT MODAL -->
+  <div id="contact-modal-container" class="modal-shell" aria-hidden="true">
+    <div id="contact-modal-backdrop" class="modal-backdrop" data-close-contact-modal></div>
+
+    <aside
+      id="contact-modal"
+      class="modal-panel modal-panel-right"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Contact links"
+      tabindex="-1"
+    >
+      <button id="close-contact-modal" class="modal-close" aria-label="Close contact" data-close-contact-modal type="button">
+        <span aria-hidden="true">×</span>
+      </button>
+
+      <div id="modal-contact-section">
+        <div class="contact-header">
+          <h3>Contact</h3>
+          <p>Catch me here:</p>
+        </div>
+
+        <div class="contact-links" role="list">
+          <a
+            class="contact-link"
+            href="https://github.com/k3yueen"
+            target="_blank"
+            rel="noopener noreferrer"
+            role="listitem"
+            aria-label="Open GitHub in new tab"
+          >
+            <span class="contact-link-text">GitHub</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M15 3h6v6"></path>
+              <path d="M10 14 21 3"></path>
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            </svg>
+          </a>
+
+          <a
+            class="contact-link"
+            href="https://www.linkedin.com/in/roza-antonevici-b49042289/"
+            target="_blank"
+            rel="noopener noreferrer"
+            role="listitem"
+            aria-label="Open LinkedIn in new tab"
+          >
+            <span class="contact-link-text">LinkedIn</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M15 3h6v6"></path>
+              <path d="M10 14 21 3"></path>
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="menu-bottom" style="margin-top: 22px;">
+          <p class="menu-bottom-title">say hello</p>
+          <a href="mailto:rozic.antonevici@me.com" class="menu-bottom-body">
+            rozic.antonevici@me.com
+          </a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</header>
+
+<script is:inline>
+  const body = document.body;
+
+  const navOpenBtn = document.querySelector("[data-open-nav-modal]");
+  const navCloseEls = document.querySelectorAll("[data-close-nav-modal]");
+  const navShell = document.getElementById("nav-modal-container");
+  const navPanel = document.getElementById("nav-modal");
+
+  const contactOpenBtn = document.querySelector("[data-open-contact-modal]");
+  const contactCloseEls = document.querySelectorAll("[data-close-contact-modal]");
+  const contactShell = document.getElementById("contact-modal-container");
+  const contactPanel = document.getElementById("contact-modal");
+
+  const openContactFromMenu = document.querySelector("[data-open-contact-from-menu]");
+
+  const lockScroll = (locked) => {
+    body.classList.toggle("is-modal-open", locked);
+  };
+
+  const openShell = (shell, panel, triggerBtn) => {
+    if (!shell || !panel) return;
+    shell.classList.add("is-open");
+    shell.setAttribute("aria-hidden", "false");
+    lockScroll(true);
+
+    if (triggerBtn) triggerBtn.setAttribute("aria-expanded", "true");
+    setTimeout(() => panel.focus(), 0);
+  };
+
+  const closeShell = (shell, panel, triggerBtn) => {
+    if (!shell || !panel) return;
+    shell.classList.remove("is-open");
+    shell.setAttribute("aria-hidden", "true");
+    lockScroll(false);
+
+    if (triggerBtn) triggerBtn.setAttribute("aria-expanded", "false");
+    if (triggerBtn) triggerBtn.focus();
+  };
+
+  navOpenBtn?.addEventListener("click", () => openShell(navShell, navPanel, navOpenBtn));
+  navCloseEls.forEach((el) => el.addEventListener("click", () => closeShell(navShell, navPanel, navOpenBtn)));
+
+  contactOpenBtn?.addEventListener("click", () => openShell(contactShell, contactPanel, contactOpenBtn));
+  contactCloseEls.forEach((el) => el.addEventListener("click", () => closeShell(contactShell, contactPanel, contactOpenBtn)));
+
+  openContactFromMenu?.addEventListener("click", () => {
+    closeShell(navShell, navPanel, navOpenBtn);
+    setTimeout(() => openShell(contactShell, contactPanel, contactOpenBtn), 60);
+  });
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+
+    if (contactShell?.classList.contains("is-open")) {
+      closeShell(contactShell, contactPanel, contactOpenBtn);
+      return;
+    }
+    if (navShell?.classList.contains("is-open")) {
+      closeShell(navShell, navPanel, navOpenBtn);
+    }
+  });
+
+  document.querySelectorAll('a.nav-link[data-section]').forEach((a) => {
+    a.addEventListener("click", (e) => {
+      const id = a.getAttribute("data-section");
+      if (!id) return;
+
+      const el = document.getElementById(id);
+      if (!el) return;
+
+      e.preventDefault();
+      closeShell(navShell, navPanel, navOpenBtn);
+      setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
+    });
+  });
+</script>
+
+<style>
+  #site-header {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 9999;
+    pointer-events: none;
+  }
+
+  #nav-container {
+    position: relative;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    pointer-events: auto;
+  }
+
+  .nav-logo-link {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: auto;
+    text-decoration: none;
+  }
+
+  #nav-logo {
+    height: 24px !important;
+    width: auto !important;
+    max-width: 180px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    display: block;
+  }
+
+  .btn-square {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    border: 2px solid rgba(11, 11, 11, 0.9);
+    background: #fff;
+    color: #111;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 3px 0 rgba(11, 11, 11, 0.9);
+    transition: transform 0.15s ease, background-color 0.2s ease, box-shadow 0.15s ease;
+    pointer-events: auto;
+  }
+
+  .btn-square:hover { transform: translateY(-2px); }
+  .btn-square:active { transform: translateY(1px); box-shadow: 0 1px 0 rgba(11,11,11,0.9); }
+
+  @media (max-width: 600px) {
+    #nav-container { padding: 14px; }
+    .btn-square { width: 40px; height: 40px; border-radius: 10px; }
+    #nav-logo { height: 24px !important; }
+  }
+
+  body.is-modal-open { overflow: hidden; }
+
+  .modal-shell {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+  }
+
+  .modal-shell.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(2px);
+  }
+
+  .modal-panel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: min(520px, calc(100% - 32px));
+    max-height: min(84vh, 780px);
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 18px 60px rgba(0,0,0,0.35);
+    overflow: auto;
+    outline: none;
+  }
+
+  .modal-panel-left { left: 16px; }
+  .modal-panel-right { right: 16px; }
+
+  @media (max-width: 720px) {
+    .modal-panel {
+      width: calc(100% - 24px);
+      left: 12px !important;
+      right: 12px !important;
+    }
+  }
+
+  .modal-close {
+    position: sticky;
+    top: 14px;
+    float: right;
+    margin: 14px 14px 0 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    border: 0;
+    background: rgba(0,0,0,0.08);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  .modal-close span {
+    font-size: 20px;
+    line-height: 1;
+    color: #111;
+  }
+
+  /* ===== Menu content ===== */
+  #nav-menu-container { padding: 26px 22px 22px; }
+
+  .menu-logo img {
+    width: 72px;
+    height: auto;
+    display: block;
+    margin-bottom: 14px;
+  }
+
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 10px;
+  }
+
+  .nav-link,
+  .nav-link-button {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+
+    font-family: Rubik, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    letter-spacing: -0.02em;
+    color: #111;
+    text-decoration: none;
+    line-height: 1.05;
+  }
+
+  .nav-link:hover,
+  .nav-link-button:hover { opacity: 0.85; }
+
+  .nav-extra { margin-top: 26px; }
+
+  .nav-link-inline {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.35rem;
+    font-weight: 800;
+  }
+
+  .menu-bottom {
+    margin-top: 28px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+  }
+
+  .menu-bottom-title {
+    margin: 0 0 6px;
+    font-family: Rubik, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.65);
+  }
+
+  .menu-bottom-body {
+    font-family: Rubik, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    color: #111;
+    text-decoration: none;
+  }
+
+  .menu-bottom-body:hover { text-decoration: underline; }
+
+  /* ===== Contact modal ===== */
+  #modal-contact-section { padding: 24px 22px 22px; }
+
+  .contact-header h3 {
+    margin: 4px 0 8px;
+    font-family: Rubik, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: #111;
+  }
+
+  .contact-header p {
+    margin: 0 0 18px;
+    font-family: Rubik, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    color: rgba(0,0,0,0.7);
+    line-height: 1.45;
+  }
+
+  .contact-links {
+    display: grid;
+    gap: 12px;
+  }
+
+  /* 🔥 THIS is the “bold black, not underlined, elio-like” fix */
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    padding: 10px 2px;
+    border-radius: 12px;
+
+    font-family: Rubik, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: -0.01em;
+
+    color: #111 !important;
+    text-decoration: none !important;
+  }
+
+  .contact-link:visited,
+  .contact-link:hover,
+  .contact-link:active {
+    color: #111 !important;
+    text-decoration: none !important;
+  }
+
+  .contact-link-text {
+    font-weight: 800;
+    color: #111;
+    text-decoration: none !important;
+  }
+
+  .contact-link svg { color: #111; opacity: 0.9; }
+
+  .contact-link:hover { background: rgba(0,0,0,0.04); }
+  .contact-link:active { background: rgba(0,0,0,0.07); }
+
+  .visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+</style>
